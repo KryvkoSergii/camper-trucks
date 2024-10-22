@@ -6,5 +6,5 @@ export default function CamperPage(){
         CamperPage
         <Outlet/>
     </div>
-    )
+    );
 }
