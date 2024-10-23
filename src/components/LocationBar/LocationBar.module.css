@@ -1,0 +1,33 @@
+.location_bar {
+  display: inline-block;
+  color: var(--color-3);
+}
+
+.location_bar a {
+  margin-bottom: 8px;
+}
+
+.location_bar img {
+  width: 20px;
+  height: 20px;
+  transform: translate(-342px, 15%);
+}
+
+.location_bar input {
+  width: 360px;
+  height: 56px;
+  padding-left: 46px;
+  box-sizing: border-box;
+  border: none;
+  background-color: var(--color-9);
+  border-radius: 12px;
+  outline: none;
+}
+
+.location_bar input:placeholder-shown {
+  color: var(--color-3);
+}
+
+.location_bar input:not(:placeholder-shown) {
+  color: var(--color-1);
+}

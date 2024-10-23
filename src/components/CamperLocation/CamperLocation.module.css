@@ -1,0 +1,13 @@
+.camper_location{
+
+}
+
+.camper_location img{
+    width: 20px;
+    height: 20px;
+}
+
+.camper_location input{
+    width: 360px;
+    height: 20px;
+}
