@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { getUserInfo } from "../components/api";
+import { getUserInfo, fetchAllCampers } from "../components/api";
 
 export const fetchUserLocation = createAsyncThunk(
   "user/location",
@@ -25,3 +25,15 @@ function isUserLocationDetermined(userObject) {
     (userObject.location.country !== "") | (userObject.location.city !== "")
   );
 }
+
+export const fetchCampers = createAsyncThunk(
+  "campers/fetch",
+  async (_, thunkAPI) => {
+    try {
+      const data = await fetchAllCampers();
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);

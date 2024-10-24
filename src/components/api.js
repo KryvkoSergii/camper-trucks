@@ -11,3 +11,9 @@ export const getUserInfo = async ({ latitude, longitude }) => {
   });
   return data;
 };
+
+export const fetchAllCampers = async () => {
+  const urlPosition = "https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers";
+  const { data } = await axios.get(urlPosition);
+  return data;
+};

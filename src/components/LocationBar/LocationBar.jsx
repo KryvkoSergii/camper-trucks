@@ -5,8 +5,9 @@ import Map from "../../assets/map.svg";
 import css from "./LocationBar.module.css";
 import { useSelector } from "react-redux";
 import { selectUserLocation } from "../../redux/selectors";
+import PropTypes from "prop-types";
 
-export default function LocationBar() {
+export default function LocationBar({onChangeFunction}) {
   const dispatch = useDispatch();
   const location = useSelector(selectUserLocation);
   const [shownLocation, setShownLocation] = useState("");
@@ -34,6 +35,8 @@ export default function LocationBar() {
     setShownLocation(value);
   }, [location]);
 
+  useEffect(() => {onChangeFunction(shownLocation)}, [shownLocation]);
+
   const onChange = (event) => {
     setShownLocation(event.target.value);
   }
@@ -48,3 +51,7 @@ export default function LocationBar() {
     </div>
   );
 }
+
+LocationBar.propTypes = {
+  onChangeFunction: PropTypes.func
+};

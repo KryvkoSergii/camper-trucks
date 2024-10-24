@@ -1,14 +1,16 @@
-import LocationBar from "../../components/LocationBar/LocationBar";
+import FilterList from "../../components/FilterList/FilterList";
+import CamperList from "../../components/CamperList/CamperList";
 
-export default function CamperCatalogPage(){
-    return (
+export default function CamperCatalogPage() {
+  return (
     <div>
-        CamperCatalogPage
-        <div>
-            <LocationBar/>
-        </div>
-        <div>
-
-        </div>
-    </div>)
+      CamperCatalogPage
+      <div>
+        <FilterList />
+      </div>
+      <div>
+        <CamperList />
+      </div>
+    </div>
+  );
 }
