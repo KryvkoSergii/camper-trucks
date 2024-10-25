@@ -1,0 +1,13 @@
+.action_button {
+  background-color: var(--color-4);
+  border-radius: 200px;
+  height: 56px;
+  color: var(--color-10);
+  outline: none;
+  border: none;
+}
+
+.action_button:hover,
+.action_button:active {
+  background-color: var(--color-5);
+}

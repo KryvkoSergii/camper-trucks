@@ -1,13 +1,11 @@
-.camper_location{
-
+.camper_location {
+  display: inline-block;
+  margin: 0px;
 }
 
-.camper_location img{
-    width: 20px;
-    height: 20px;
-}
-
-.camper_location input{
-    width: 360px;
-    height: 20px;
+.camper_location img {
+  width: 16px;
+  height: 16px;
+  padding: 4px;
+  transform: translateY(25%);
 }

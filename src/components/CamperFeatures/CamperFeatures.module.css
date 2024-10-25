@@ -1,0 +1,26 @@
+.camper_features{
+    list-style: none;
+}
+.camper_features li{
+    background-color: var(--color-8);
+    border-radius: 100px;
+    padding: 12px 18px;
+    display: inline-block;
+}
+
+.camper_features li .inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.camper_features img{
+    height: 20px;
+    width: 20px;
+}
+
+.camper_features a{
+    font-weight: 500; 
+}

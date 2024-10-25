@@ -10,6 +10,7 @@ import Integrated from "../../assets/integrated.svg";
 import Alcove from "../../assets/alcove.svg";
 import { useDispatch } from "react-redux";
 import { changeFilter } from "../../redux/filterSlice";
+import ActionButton from "../ActionButton/ActionButton";
 
 export default function FilterList() {
   const dispatch = useDispatch();
@@ -29,7 +30,6 @@ export default function FilterList() {
     <div>
       <LocationBar
         onChangeFunction={(newValue) => {
-            console.log(newValue);
           dispatch(
             changeFilter({
               field: 'location',
@@ -68,6 +68,7 @@ export default function FilterList() {
         text="Alcove"
         onChange={onChange("alcove")}
       />
+      <ActionButton label="Search" onClick={(event) => console.log("click")}/>
     </div>
   );
 }

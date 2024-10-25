@@ -9,4 +9,9 @@
   --color-8: #F2F4F7;
   --color-9: #F7F7F7;
   --color-10: #FFFFFF;
+
+  --camper-item-header-font-size: 24px;
+  --camper-item-header-line-height: 32px;
+  --camper-item-header-font-weight: 600;
+  --general-font-family: Inter, sans-serif;
 }

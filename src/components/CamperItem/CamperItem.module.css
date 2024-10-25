@@ -1,0 +1,29 @@
+.camper_item {
+  display: table;
+}
+
+.price,
+.camper_name {
+  font-size: var(--camper-item-header-font-size);
+  line-height: var(--camper-item-header-line-height);
+  font-weight: var(--camper-item-header-font-weight);
+  font-family: Inter, sans-serif;
+}
+
+.photo_container{
+    float: left;
+    width: 30%;
+}
+
+.details_container{
+    float: left;
+    width: 70%; 
+}
+
+.camper_photo {
+  height: 320px;
+  width: 292px;
+  object-fit: cover;
+  object-position: 50%;
+  border-radius: 10px;
+}
