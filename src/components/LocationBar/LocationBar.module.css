@@ -1,4 +1,5 @@
 .location_bar {
+  position: absolute;
   color: var(--color-3);
   display: inline-block;
 }
@@ -10,7 +11,7 @@
 .location_bar img {
   width: 20px;
   height: 20px;
-  transform: translate(20px, -40px);
+  transform: translate(-340px, 5px);
 }
 
 .location_bar input {

@@ -15,10 +15,17 @@ import ActionButton from "../ActionButton/ActionButton";
 import { selectFilters } from "../../redux/selectors";
 import { fetchByQueryCampers } from "../../redux/operations";
 import css from "./FilterList.module.css";
+import buildFilter from "../filterBuilder";
 
 export default function FilterList() {
   const dispatch = useDispatch();
   const filters = useSelector(selectFilters);
+  const page = 0;
+
+  const onSearch = (event) => {
+    const cleanedFilter = buildFilter(filters, page);
+    dispatch(fetchByQueryCampers(cleanedFilter));
+  };
 
   const onChange = (stateFieldName) => {
     return (event) => {
@@ -51,24 +58,6 @@ export default function FilterList() {
         })
       );
     };
-  };
-
-  const onSearch = (event) => {
-    const cleanedFilter = {};
-    for (const [key, value] of Object.entries(filters)) {
-      if (key !== "location" && key !== "form" && value !== false) {
-        cleanedFilter[key] = value;
-      }
-
-      if (key === "location" && value) {
-        cleanedFilter[key] = value;
-      }
-
-      if (key === "form" && value) {
-        cleanedFilter[key] = value;
-      }
-    }
-    dispatch(fetchByQueryCampers(cleanedFilter));
   };
 
   return (
