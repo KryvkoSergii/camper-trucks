@@ -14,11 +14,6 @@ export const getUserInfo = async ({ latitude, longitude }) => {
   return data;
 };
 
-export const fetchAllCampers = async () => {
-  const { data } = await axios.get(baseCamperUrl);
-  return data;
-};
-
 export const fetchByQuery = async (params) => {
   const { data } = await axios.get(baseCamperUrl, {
     params: params

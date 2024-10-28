@@ -27,6 +27,7 @@ export default function CamperBooking() {
         <DatePicker
           selected={bookingDate}
           onChange={(date) => setBookingDate(date)}
+          placeholderText="Booking date*"
         />
         <textarea placeholder="Comment" />
         <div className={css.camper_details_footer}>

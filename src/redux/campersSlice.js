@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { fetchByQueryCampers } from "./operations";
 
 const handlePending = (state) => {
+  console.log("start");
   state.loading = true;
 };
 
@@ -13,23 +14,21 @@ const updateCampersState = (state, action) => {
     state.total = 0;
     state.items = [];
   }
+  state.loading = false;
 };
 
 const handleReject = (state) => {
   state.total = 0;
   state.items = [];
+  state.loading = false;
 };
 
 const campersSlice = createSlice({
   name: "campers",
-  initialState: { total: 0, items: [] },
+  initialState: { total: 0, items: [], loading: false },
   extraReducers: (builder) =>
     builder
-      // .addCase(fetchCampers.pending, (state, action) => {})
-      // .addCase(fetchCampers.fulfilled, updateCampersState)
-      // .addCase(fetchCampers.rejected, handleReject)
-
-      .addCase(fetchByQueryCampers.pending, (state, action) => {})
+      .addCase(fetchByQueryCampers.pending, handlePending)
       .addCase(fetchByQueryCampers.fulfilled, updateCampersState)
       .addCase(fetchByQueryCampers.rejected, handleReject),
 });

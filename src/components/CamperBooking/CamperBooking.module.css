@@ -20,7 +20,7 @@
   margin-bottom: 24px;
 }
 
-.camper_booking_footer{
+.camper_booking_footer {
   margin-top: 24px;
   text-align: center;
 }
@@ -50,17 +50,4 @@
   padding: 18px;
   box-sizing: border-box;
   height: auto;
-}
-
-.camper_booking .react-datepicker__header {
-  background-color: white !important;
-  color: #bdbdbd !important;
-}
-
-.camper_booking .react-datepicker__input-container input {
-  background-color: #f0f8ff; /* Колір фону */
-  color: #333; /* Колір тексту */
-  border: 2px solid #007bff; /* Кольор рамки */
-  border-radius: 4px;
-  padding: 5px;
 }
