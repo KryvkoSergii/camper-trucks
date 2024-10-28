@@ -1,4 +1,4 @@
-input[type="checkbox"].filter_button_box {
+input[type="radio"].filter_button_box {
   position: absolute;
   z-index: -1;
   width: 0;
@@ -6,7 +6,7 @@ input[type="checkbox"].filter_button_box {
   opacity: 0;
 }
 
-input[type="checkbox"].filter_button_box + label {
+input[type="radio"].filter_button_box + label {
   border: 1px solid transparent;
   width: 112px;
   height: 96px;
@@ -19,7 +19,7 @@ input[type="checkbox"].filter_button_box + label {
   gap: 8px;
 }
 
-input[type="checkbox"].filter_button_box:checked + label {
+input[type="radio"].filter_button_box:checked + label {
   border: var(--color-5) solid 1px;
 }
 

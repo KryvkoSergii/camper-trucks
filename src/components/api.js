@@ -19,6 +19,13 @@ export const fetchAllCampers = async () => {
   return data;
 };
 
+export const fetchByQuery = async (params) => {
+  const { data } = await axios.get(baseCamperUrl, {
+    params: params
+  });
+  return data;
+};
+
 export async function fetchCamperDetails(camperId) {
   const { data } = await axios.get(baseCamperUrl + `/${camperId}`);
   return data;

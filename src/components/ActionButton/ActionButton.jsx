@@ -16,5 +16,5 @@ export default function ActionButton({ label, onClick, width = "166px" }) {
 ActionButton.propTypes = {
   label: PropTypes.string,
   onClick: PropTypes.func,
-  width: PropTypes.number,
+  width: PropTypes.string,
 };

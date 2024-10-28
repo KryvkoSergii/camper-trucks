@@ -1,5 +1,16 @@
 import PropTypes from "prop-types";
 import css from "./CamperFeatures.module.css";
+import AutomaticIcon from "../../assets/automatic.svg";
+import ACIcon from "../../assets/ac.svg";
+import BathroomIcon from "../../assets/bathroom.svg";
+import KitchenIcon from "../../assets/kitchen.svg";
+import TVIcon from "../../assets/tv.svg";
+import RadioIcon from "../../assets/radio.svg";
+import RefrigeratorIcon from "../../assets/refrigerator.svg";
+import MicrowaveIcon from "../../assets/microwave.svg";
+import GasIcon from "../../assets/gas.svg";
+import WaterIcon from "../../assets/water.svg";
+import PetrolIcon from "../../assets/petrol.svg";
 
 class Mapping {
   constructor(
@@ -19,34 +30,26 @@ const capitalizeString = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 const mapping = {
   transmission: new Mapping(
     () => "Automatic",
-    "/src/assets/automatic.svg",
+    AutomaticIcon,
     undefined,
     (item) => item["transmission"] === "automatic"
   ),
-  AC: new Mapping(() => "AC", "/src/assets/ac.svg", "AC"),
-  bathroom: new Mapping(
-    () => "Bathroom",
-    "/src/assets/bathroom.svg",
-    "bathroom"
-  ),
-  kitchen: new Mapping(() => "Kitchen", "/src/assets/kitchen.svg", "kitchen"),
-  TV: new Mapping(() => "TV", "/src/assets/tv.svg", "TV"),
-  radio: new Mapping(() => "Radio", "/src/assets/radio.svg", "radio"),
+  AC: new Mapping(() => "AC", ACIcon, "AC"),
+  bathroom: new Mapping(() => "Bathroom", BathroomIcon, "bathroom"),
+  kitchen: new Mapping(() => "Kitchen", KitchenIcon, "kitchen"),
+  TV: new Mapping(() => "TV", TVIcon, "TV"),
+  radio: new Mapping(() => "Radio", RadioIcon, "radio"),
   refrigerator: new Mapping(
     () => "Refrigerator",
-    "/src/assets/refrigerator.svg",
+    RefrigeratorIcon,
     "refrigerator"
   ),
-  microwave: new Mapping(
-    () => "Microwave",
-    "/src/assets/microwave.svg",
-    "microwave"
-  ),
-  gas: new Mapping(() => "Gas", "/src/assets/gas.svg", "gas"),
-  water: new Mapping(() => "Water", "/src/assets/water.svg", "water"),
+  microwave: new Mapping(() => "Microwave", MicrowaveIcon, "microwave"),
+  gas: new Mapping(() => "Gas", GasIcon, "gas"),
+  water: new Mapping(() => "Water", WaterIcon, "water"),
   engine: new Mapping(
     (item) => capitalizeString(item["engine"]),
-    "/src/assets/petrol.svg",
+    PetrolIcon,
     "engine",
     (item) => item["engine"] !== undefined
   ),

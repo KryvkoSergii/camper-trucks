@@ -31,7 +31,7 @@ export default function LocationBar({onChangeFunction}) {
   }, [dispatch]);
 
   useEffect(() => {
-    const value = location.city ? `${location.city}, ${location.country}` : "";
+    const value = location.city ? `${location.country}, ${location.city}` : "";
     setShownLocation(value);
   }, [location]);
 

@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { getUserInfo, fetchAllCampers } from "../components/api";
+import { getUserInfo, fetchAllCampers, fetchByQuery } from "../components/api";
 
 export const fetchUserLocation = createAsyncThunk(
   "user/location",
@@ -34,6 +34,17 @@ export const fetchCampers = createAsyncThunk(
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const fetchByQueryCampers = createAsyncThunk(
+  "campers/fetchByQuery",
+  async (payload, thunkAPI) => {
+    try {
+      return await fetchByQuery(payload);
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
     }
   }
 );
