@@ -23,7 +23,11 @@ function App() {
     >
       <div>
         <Navigation />
-        {loading && <Loader />}
+        {loading && (
+          <div className="initial_load">
+            <Loader />
+          </div>
+        )}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
