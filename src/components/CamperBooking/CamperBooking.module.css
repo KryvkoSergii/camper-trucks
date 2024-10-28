@@ -31,7 +31,8 @@
   gap: 14px;
 }
 
-.camper_booking_form input {
+.camper_booking_form input, 
+.react-datepicker__input-container input {
   background-color: var(--color-9);
   border: none;
   outline: none;
@@ -39,6 +40,7 @@
   border-radius: 12px;
   padding: 18px;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .camper_booking_form textarea {
