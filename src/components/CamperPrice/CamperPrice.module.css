@@ -1,0 +1,6 @@
+.price {
+  font-size: var(--camper-item-header-font-size);
+  line-height: var(--camper-item-header-line-height);
+  font-weight: var(--camper-item-header-font-weight);
+  font-family: Inter, sans-serif;
+}

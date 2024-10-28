@@ -1,0 +1,29 @@
+.content {
+  background-color: var(--color-8);
+  background-image: url("../../pictures/logo.jfif");
+  background-size: cover;
+  background-position: center;
+
+  color: var(--color-9);
+}
+
+.advertisement{
+    padding: 260px 64px 260px;
+
+}
+
+.advertisement_1 {
+  font-size: var(--advertisement-1-font-size);
+  line-height: var(--advertisement-1-line-height);
+  font-weight: var(--advertisement-1-font-weight);
+  display: block;
+  margin-bottom: 16px;
+}
+
+.advertisement_2 {
+  font-size: var(--camper-item-header-font-size);
+  line-height: var(--camper-item-header-line-height);
+  font-weight: var(--camper-item-header-font-weight);
+  display: block;
+  margin-bottom: 40px;
+}

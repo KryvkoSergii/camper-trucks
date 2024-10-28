@@ -1,5 +1,10 @@
 .camper_features{
     list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 .camper_features li{
     background-color: var(--color-8);

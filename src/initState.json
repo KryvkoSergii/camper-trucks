@@ -1,0 +1,29 @@
+{
+    "id": "-1",
+    "name": "",
+    "price": 0,
+    "rating": 0,
+    "location": "",
+    "description": "",
+    "form": "",
+    "length": "",
+    "width": "",
+    "height": "",
+    "tank": "",
+    "consumption": "",
+    "transmission": "",
+    "engine": "",
+    "AC": true,
+    "bathroom": false,
+    "kitchen": true,
+    "TV": false,
+    "radio": true,
+    "refrigerator": false,
+    "microwave": true,
+    "gas": true,
+    "water": true,
+    "gallery": [
+    ],
+    "reviews": [
+    ]
+  }

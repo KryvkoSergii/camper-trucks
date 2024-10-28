@@ -1,0 +1,28 @@
+.details_features {
+  background-color: var(--color-9);
+  border-radius: 10px;
+  padding: 57px 44px;
+}
+
+.details_features p {
+  margin-top: 100px;
+  font-size: var(--details-navigation-font-size);
+  line-height: var(--details-navigation-line-height);
+  font-weight: var(--details-navigation-font-weight);
+  font-family: Inter, sans-serif;
+}
+.details_features hr {
+  border-top: 1px solid var(--color-7);
+  margin-bottom: 24px;
+}
+
+.feature {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+
+.consumption {
+  display: flex;
+  justify-content: space-between;
+}

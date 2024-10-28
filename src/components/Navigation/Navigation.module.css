@@ -1,0 +1,31 @@
+.header {
+  height: 72px;
+  background-color: var(--color-9);
+  padding: 0px;
+}
+
+.header img {
+  position: absolute;
+  transform: translate(64px, 28px);
+}
+
+.navigation_container {
+  justify-items: center;
+  transform: translateY(24px);
+}
+
+.navigation {
+  display: flex;
+  gap: 32px;
+
+}
+
+.active_link{
+    text-decoration: none;
+    color: var(--color-5);
+}
+
+.passiv_link{
+    text-decoration: none;
+    color: var(--color-1);
+}

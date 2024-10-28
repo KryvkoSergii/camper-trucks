@@ -3,42 +3,52 @@ import css from "./CamperFeatures.module.css";
 
 class Mapping {
   constructor(
-    label,
+    labelExtractor = (item) => undefined,
     icon,
     fieldName,
     isApply = (item) => item[fieldName] === true
   ) {
-    this.label = label;
+    this.labelExtractor = labelExtractor;
     this.icon = icon;
     this.isApply = isApply;
   }
 }
 
+const capitalizeString = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+
 const mapping = {
   transmission: new Mapping(
-    "Automatic",
+    () => "Automatic",
     "/src/assets/automatic.svg",
     undefined,
     (item) => item["transmission"] === "automatic"
   ),
-  AC: new Mapping("AC", "/src/assets/ac.svg", "AC"),
-  bathroom: new Mapping("Bathroom", "/src/assets/bathroom.svg", "bathroom"),
-  kitchen: new Mapping("Kitchen", "/src/assets/kitchen.svg", "kitchen"),
-  TV: new Mapping("TV", "/src/assets/tv.svg", "TV"),
-  radio: new Mapping("Radio", "/src/assets/radio.svg", "radio"),
+  AC: new Mapping(() => "AC", "/src/assets/ac.svg", "AC"),
+  bathroom: new Mapping(
+    () => "Bathroom",
+    "/src/assets/bathroom.svg",
+    "bathroom"
+  ),
+  kitchen: new Mapping(() => "Kitchen", "/src/assets/kitchen.svg", "kitchen"),
+  TV: new Mapping(() => "TV", "/src/assets/tv.svg", "TV"),
+  radio: new Mapping(() => "Radio", "/src/assets/radio.svg", "radio"),
   refrigerator: new Mapping(
-    "Refrigerator",
+    () => "Refrigerator",
     "/src/assets/refrigerator.svg",
     "refrigerator"
   ),
-  microwave: new Mapping("Microwave", "/src/assets/microwave.svg", "microwave"),
-  gas: new Mapping("Gas", "/src/assets/gas.svg", "gas"),
-  water: new Mapping("Water", "/src/assets/water.svg", "water"),
+  microwave: new Mapping(
+    () => "Microwave",
+    "/src/assets/microwave.svg",
+    "microwave"
+  ),
+  gas: new Mapping(() => "Gas", "/src/assets/gas.svg", "gas"),
+  water: new Mapping(() => "Water", "/src/assets/water.svg", "water"),
   engine: new Mapping(
-    "Petrol",
+    (item) => capitalizeString(item["engine"]),
     "/src/assets/petrol.svg",
-    undefined,
-    (item) => item["engine"] === "petrol"
+    "engine",
+    (item) => item["engine"] !== undefined
   ),
 };
 
@@ -47,14 +57,15 @@ export default function CamperFeatures({ item }) {
     <ul className={css.camper_features}>
       {Object.keys(item)
         .filter((i) => i in mapping && mapping[i].isApply(item))
-        .map((i) => singleFeature(item.id, mapping[i]))}
+        .map((i) => singleFeature(item, mapping[i]))}
     </ul>
   );
 }
 
-function singleFeature(itemId, { label, icon }) {
+function singleFeature(item, { labelExtractor, icon }) {
+  const label = labelExtractor(item);
   return (
-    <li key={`${itemId}-${label}-feature`}>
+    <li key={`${item.id}-${label}-feature`}>
       <div className={css.inner}>
         <img src={icon} />
         <a>{label}</a>
@@ -75,7 +86,7 @@ let Item = PropTypes.shape({
   microwave: PropTypes.bool,
   gas: PropTypes.bool,
   water: PropTypes.bool,
-  engine: PropTypes.string
+  engine: PropTypes.string,
 });
 
 CamperFeatures.propTypes = {

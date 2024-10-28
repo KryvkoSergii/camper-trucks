@@ -5,6 +5,7 @@ import ActionButton from "../ActionButton/ActionButton";
 import PropTypes from "prop-types";
 import css from "./CamperItem.module.css";
 import { useNavigate } from "react-router-dom";
+import CamperPrice from "../CamperPrice/CamperPrice";
 
 export default function CamperItem({ item }) {
   const navigate = useNavigate();
@@ -26,7 +27,7 @@ export default function CamperItem({ item }) {
         />
         <CamperLocation location={item.location} />
         <a>{item.description}</a>
-        <a className={css.price}>€{item.price.toFixed(2)}</a>
+        <CamperPrice price={item.price} />
         <CamperFeatures item={item} />
         <ActionButton
           label="Show more"

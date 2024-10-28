@@ -1,4 +1,7 @@
-.camper_raiting img{
-    width: 16px;
-    height: 16px;
+.camper_raiting {
+  text-decoration: underline;
+}
+.camper_raiting img {
+  width: 16px;
+  height: 16px;
 }

@@ -14,4 +14,14 @@
   --camper-item-header-line-height: 32px;
   --camper-item-header-font-weight: 600;
   --general-font-family: Inter, sans-serif;
+
+  --details-navigation-font-size: 20px;
+  --details-navigation-line-height: 24px;
+  --details-navigation-font-weight: 600;
+
+  --advertisement-1-font-size: 48px;
+  --advertisement-1-line-height: 32px;
+  --advertisement-1-font-weight: 600;
 }
+
+

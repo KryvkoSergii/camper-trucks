@@ -1,0 +1,66 @@
+.camper_booking {
+  border: 1px solid var(--color-7);
+  border-radius: 10px;
+  padding: 57px 44px;
+}
+
+.camper_booking p {
+  font-size: var(--details-navigation-font-size);
+  font-weight: var(--details-navigation-font-weight);
+  line-height: var(--details-navigation-line-height);
+  margin-bottom: 8px;
+  margin-top: 0px;
+}
+
+.camper_booking a {
+  color: var(--color-3);
+}
+
+.camper_booking_header {
+  margin-bottom: 24px;
+}
+
+.camper_booking_footer{
+  margin-top: 24px;
+  text-align: center;
+}
+
+.camper_booking_form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.camper_booking_form input {
+  background-color: var(--color-9);
+  border: none;
+  outline: none;
+  height: 60px;
+  border-radius: 12px;
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.camper_booking_form textarea {
+  background-color: var(--color-9);
+  border: none;
+  outline: none;
+  height: 60px;
+  border-radius: 12px;
+  padding: 18px;
+  box-sizing: border-box;
+  height: auto;
+}
+
+.camper_booking .react-datepicker__header {
+  background-color: white !important;
+  color: #bdbdbd !important;
+}
+
+.camper_booking .react-datepicker__input-container input {
+  background-color: #f0f8ff; /* Колір фону */
+  color: #333; /* Колір тексту */
+  border: 2px solid #007bff; /* Кольор рамки */
+  border-radius: 4px;
+  padding: 5px;
+}

@@ -1,0 +1,110 @@
+.camper_details {
+  margin: 48px 64px 80px;
+}
+
+.raiting_details {
+  gap: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.camper_details_footer {
+  margin-top: 44px;
+  display: flex;
+  flex-direction: row;
+}
+
+.camper_name {
+  font-size: var(--camper-item-header-font-size);
+  line-height: var(--camper-item-header-line-height);
+  font-weight: var(--camper-item-header-font-weight);
+  font-family: Inter, sans-serif;
+}
+
+.camper_gallary {
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  gap: 48px;
+  flex-direction: row;
+  overflow-x: auto;
+  margin: 28px 0px;
+}
+
+.camper_gallary_img {
+  height: 312px;
+  width: 292px;
+  object-fit: cover;
+  object-position: 50%;
+  border-radius: 10px;
+}
+
+.camper_description {
+  color: var(--color-2);
+}
+
+.camper_details fieldset {
+  border: none;
+  margin-top: 60px;
+}
+
+input[type="radio"].button_box {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  gap: 40px;
+}
+
+input[type="radio"].button_box + label {
+  text-decoration: none;
+  stroke: var(--color-10);
+}
+
+input[type="radio"].button_box:checked + label {
+  stroke: var(--color-4);
+}
+
+.navigation_label {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-size: var(--details-navigation-font-size);
+  line-height: var(--details-navigation-line-height);
+  font-weight: var(--details-navigation-font-weight);
+}
+
+.navigation_label img {
+  width: 82px;
+  z-index: 2;
+}
+
+.camper_details_footer {
+  display: flex;
+  gap: 40px;
+}
+
+.camper_details_footer_cell {
+  width: 50%;
+  height: 100%;
+}
+
+.responsive_line{
+  z-index: 1;
+  transform: translateY(-3px);
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-7);
+  margin: 0 auto;
+  padding: 0px;
+}

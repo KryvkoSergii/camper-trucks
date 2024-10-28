@@ -1,0 +1,48 @@
+.review_list{
+    list-style: none;
+    display: flex;
+    gap: 44px;
+    flex-direction: column;
+}
+
+.reviewer_label {
+  background-color: var(--color-8);
+  color: var(--color-4);
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  line-height: var(--camper-item-header-line-height);
+  font-size: var(--camper-item-header-font-size);
+  font-weight: var(--camper-item-header-font-weight);
+  display: inline-block;
+  border-radius: 60px;
+  align-content: center;
+}
+
+.reviewer_sub_label {
+  display: inline-block;
+  align-content: center;
+}
+
+.review_header {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.raiting {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  padding: 0px;
+}
+
+.raiting img {
+  width: 16px;
+  height: 16px;
+}
+
+.comment {
+  color: var(--color-2);
+}

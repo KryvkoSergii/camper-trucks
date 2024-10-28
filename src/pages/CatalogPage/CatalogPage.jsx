@@ -4,7 +4,6 @@ import CamperList from "../../components/CamperList/CamperList";
 export default function CamperCatalogPage() {
   return (
     <div>
-      CamperCatalogPage
       <div>
         <FilterList />
       </div>
