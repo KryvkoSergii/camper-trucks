@@ -1,8 +1,32 @@
-# React + Vite
+# Camper Trucks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Camper Trucks](https://camper-trucks.vercel.app/catalog) — вебсайт для каталогу автодомів та кемперів. Сайт дозволяє користувачам переглядати, порівнювати та дізнаватися про доступні моделі кемперів та фургонів.
 
-Currently, two official plugins are available:
+## Зміст
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Особливості](#особливості)
+- [Технології](#технології)
+- [Запуск проєкту](#запуск-проєкту)
+- [Налаштування](#налаштування)
+- [Внесок у проєкт](#внесок-у-проєкт)
+- [Ліцензія](#ліцензія)
+
+## Особливості
+
+- **Перегляд каталогу**: Користувачі можуть переглядати та сортувати каталог автомобілів.
+- **Інформація про моделі**: Деталі про кожну модель.
+
+## Технології
+
+Проєкт створено з використанням таких технологій:
+
+- **Frontend**: React, CSS, та бібліотеки для UI
+- **Deployment**: Vercel
+
+## Запуск проєкту
+
+Щоб запустити проєкт локально, виконайте такі кроки:
+
+1. Клонуйте репозиторій:
+   ```bash
+   git clone https://github.com/KryvkoSergii/camper-trucks.git
