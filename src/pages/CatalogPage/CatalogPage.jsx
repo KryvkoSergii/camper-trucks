@@ -5,8 +5,8 @@ import css from "./CatalogPage.module.css";
 export default function CamperCatalogPage() {
   return (
     <div className={css.catalog}>
-      <FilterList />
-      <CamperList />
+      <div><FilterList /></div>
+      <div><CamperList /></div>
     </div>
   );
 }

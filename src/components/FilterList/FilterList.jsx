@@ -72,7 +72,7 @@ export default function FilterList() {
   };
 
   return (
-    <div>
+    <>
       <LocationBar
         onChangeFunction={(newValue) => {
           dispatch(
@@ -142,6 +142,6 @@ export default function FilterList() {
         </div>
       </div>
       <ActionButton label="Search" onClick={onSearch} />
-    </div>
+    </>
   );
 }

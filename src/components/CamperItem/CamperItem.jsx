@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import css from "./CamperItem.module.css";
 import { useNavigate } from "react-router-dom";
 import CamperPrice from "../CamperPrice/CamperPrice";
+import FavoriteButton from "../FavoriteButton/FavoriteButton";
 
 export default function CamperItem({ item }) {
   const navigate = useNavigate();
@@ -20,14 +21,23 @@ export default function CamperItem({ item }) {
         />
       </div>
       <div className={css.details_container}>
-        <a className={css.camper_name}>{item.name}</a>
-        <CamperRaiting
-          raiting={item.rating}
-          reviewsCount={item.reviews.length}
-        />
-        <CamperLocation location={item.location} />
-        <a>{item.description}</a>
-        <CamperPrice price={item.price} />
+        <div>
+          <div className={css.details_container_header}>
+            <a className={css.camper_name}>{item.name}</a>
+            <div className={css.details_container_header_price}>
+              <CamperPrice price={item.price} />
+              <FavoriteButton />
+            </div>
+          </div>
+          <div className={css.details_container_raiting}>
+            <CamperRaiting
+              raiting={item.rating}
+              reviewsCount={item.reviews.length}
+            />
+            <CamperLocation location={item.location} />
+          </div>
+        </div>
+        <a>{cropText(item.description)}</a>
         <CamperFeatures item={item} />
         <ActionButton
           label="Show more"
@@ -36,6 +46,10 @@ export default function CamperItem({ item }) {
       </div>
     </div>
   );
+}
+
+function cropText(value) {
+  return value && value.length > 60 ? value.substring(0, 60) + "..." : value;
 }
 
 let GalleryItem = PropTypes.shape({

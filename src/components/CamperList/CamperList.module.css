@@ -1,0 +1,7 @@
+.camper_list{
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
