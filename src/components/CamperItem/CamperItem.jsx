@@ -26,7 +26,7 @@ export default function CamperItem({ item }) {
             <a className={css.camper_name}>{item.name}</a>
             <div className={css.details_container_header_price}>
               <CamperPrice price={item.price} />
-              <FavoriteButton />
+              <FavoriteButton id={item.id} />
             </div>
           </div>
           <div className={css.details_container_raiting}>
