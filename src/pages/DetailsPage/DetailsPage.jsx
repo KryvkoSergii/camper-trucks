@@ -6,8 +6,9 @@ import CamperRaiting from "../../components/CamperRaiting/CamperRaiting";
 import CamperLocation from "../../components/CamperLocation/CamperLocation";
 import CamperPrice from "../../components/CamperPrice/CamperPrice";
 import Underline from "../../assets/underline.svg";
-import CamperDetailFeatures from "../../components/CamperDetailFeatures/CamperDetailFeatures"
+import CamperDetailFeatures from "../../components/CamperDetailFeatures/CamperDetailFeatures";
 import CamperReviews from "../../components/CamperReviews/CamperReviews";
+import ModalImage from "react-modal-image";
 
 import initState from "../../initState.json";
 import CamperBooking from "../../components/CamperBooking/CamperBooking";
@@ -59,7 +60,7 @@ export default function CamperPage() {
           .map((pic) => pic["original"])
           .map((src) => (
             <li key={extractImgId(src)}>
-              <img className={css.camper_gallary_img} src={src} />
+              <ModalImage small={src} large={src} alt={camperDetails.name} className={css.camper_gallary_img}/>
             </li>
           ))}
       </ul>
@@ -101,8 +102,8 @@ export default function CamperPage() {
 
       <div className={css.camper_details_footer}>
         <div className={css.camper_details_footer_cell}>
-          {featureSelected && <CamperDetailFeatures item={camperDetails}/>}
-          {reviewSelected && <CamperReviews item={camperDetails}/>}
+          {featureSelected && <CamperDetailFeatures item={camperDetails} />}
+          {reviewSelected && <CamperReviews item={camperDetails} />}
           <Outlet />
         </div>
         <div className={css.camper_details_footer_cell}>
