@@ -52,4 +52,5 @@
   padding: 18px;
   box-sizing: border-box;
   height: auto;
+  resize: none;
 }

@@ -9,6 +9,10 @@ button {
   margin: 0px;
 }
 
-.initial_load{
+.initial_load {
   text-align: center;
+}
+
+.react-datepicker__header {
+  background-color: var(--color-10) !important;
 }
